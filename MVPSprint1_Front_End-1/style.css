@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: #fff;
+    --color-dark1: #34344e;
+    --color-dark2: #3a415a;
+    --color-dark3: #566981;
+    --color-dark4: #89a7b1;
+    --color-dark5: #cbdad5;
+    --color-dark6: #2f2f46;
+}
+
+body {
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    height: 20vh;
+    font-family: 'Lato';
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: .8rem;
+    background-color: var(--color-dark6);
+    min-height: 50px;
+}
+
+.box-img-header {
+    height: 100%;
+}
+
+.img_logo {
+    max-width: 60px;
+    height: 100%;
+}
+
+img_logo[title]:hover::after {
+    content: attr(title);
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+img_logo[title]:hover::after {
+    opacity: 1;
+}
+
+.box-btn-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+button,
+.link-action {
+    padding: .6rem;
+    font-size: .9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 4s;
+}
+
+.btn-action {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.btn-action:hover {
+    background-color: var(--color-dark3);
+    border: 1px solid var(--color-dark3);
+}
+
+.link-action {
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    padding: 4rem;
+}
+
+.first-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: left;
+    min-height: 65px;
+    background-color: var(--color-dark2);
+    flex-direction: column;
+}
+
+.first-section>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    /* Largura inicial de 100% para se ajustar à largura do contêiner pai */
+    max-width: 700px;
+    /* Largura máxima de 700px */
+}
+
+th,
+td {
+    border: 1px solid var(--color-dark5);
+    text-align: left;
+    padding: 10px;
+    color: var(--color-dark4);
+}
+
+th {
+    background-color: var(--color-dark6);
+}
+
+tr {
+    background-color: var(--color-dark3);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-dark2);
+}
+
+.ListaEncomenda {
+    width: 1400px;
+    /* Defina a largura máxima da div para ser igual à largura da tabela */
+    height: 200px;
+    overflow-x: auto;
+    /* Adicione barras de rolagem horizontais caso o conteúdo seja maior que a largura da div */
+}
+
+
+.title {
+    color: var(--color-dark5);
+}
+
+.third-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: left;
+    flex-direction: column;
+}
+
+.newItem {
+    width: 700px;
+    color: rgb(255, 25, 0);
+    justify-content: left;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 1rem;
+}
+
+
+.newItem input[type="text"],
+.newItem input[type="date"],
+.newItem select {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-dark3);
+}
+
+.fourth-section {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-dark2);
+    flex-direction: column;
+}
+
+.fourth-section.title {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-dark3);
+    padding: 4rem;
+    flex-direction: row;
+    display: flex;
+}
+
+.fourth-section>div {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+
+.footer {
+    display: flex;
+    padding: 4rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.close:hover {
+    color: var(--color-cyan1);
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: var(--color-dark3);
+    border: 1px solid var(--color-dark3);
+}

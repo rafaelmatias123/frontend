@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encontre aqui -Encomendas</title>
+</head>
+
+<body>
+    <header>
+        <div class="box-img-header">
+            <img class="img_logo" src="./images/armazenamento.jpg" alt="LOGO" width="80" height="80"
+                title="Otimize tempo">
+            <h1>Encontre aqui -Encomendas</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Lista de Encomendas -->
+        <section id="encomenda" class="first-section">
+            <div id="intro_enc">
+                <h1 class="title"> -Encomendas</h1>
+                <p> Cadastrar e remover encomendas</p>
+                <a class="btn-action link-action" href="#acao_enc">Cadastrar</a>
+            </div>
+            <div class="ListaEncomenda">
+                <table id="tab_enc" class="tbl-model">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Casa</th>
+                        <th>Quantidade_p</th>
+                        <th>Pacote</th>
+                        <th><img src="images\excluir.png" width="15px" height="15px"></th>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="area_inclusao" class="third-section">
+            <div id="acao_enc">
+                <h2 class="subtitle">Cadastrar encomenda</h2>
+                <section class="newItem">
+                    <p> Informe os dados:</p>
+                    <div id="linha_enc">
+                        <input type="text" id="newNomeEncomenda" placeholder="Nome da encomenda">
+                        <input type="text" id="newCasa" placeholder="Casa">
+                        <input type="text" id="newQuantidade_p" placeholder="Quantidade_p">
+                        <select id="newPacote">
+                            <option value="" disabled selected>Pacote</option>
+                            <option value="P">Pequeno</option>
+                            <option value="M">Medio</option>
+                            <option value="G">Grande</option>
+                        </select>
+                    </div>
+                    <span onclick="adicionarEncomenda()" class="btn-action link-action">Adicionar</span>
+                </section>
+            </div>
+
+
+            <section id="projeto" class="fourth-section">
+                <h2 class="title">Projeto:</h2>
+                <div id="meu-projeto-lista">
+                    <a href="https://github.com/rafaelmatias123" title="GitHub" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-github"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+    </main>
+    <footer id="dados">
+        <div>
+            <p class="info">Rafael Oliveira</p>
+            <p class="info">Projeto MVP - Engenharia de Software - 2024/12/13</p>
+        </div>
+    </footer>
+</body>
+<script src="scripts.js"></script>
+
+</html>
